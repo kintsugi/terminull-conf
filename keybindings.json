@@ -1,67 +1,237 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-  {
-    "key": "ctrl+shift+p",
-    "command": "workbench.action.showCommands"
-  },
-  {
-    "key": "shift+cmd+p",
-    "command": "-workbench.action.showCommands"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "-cursorUp",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "workbench.action.quickOpen"
-  },
-  {
-    "key": "cmd+p",
-    "command": "-workbench.action.quickOpen"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "macros.toggleSideBar"
-  },
-  {
-    "key": "cmd+b",
-    "command": "-workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "-workbench.action.switchWindow"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "-extension.vim_ctrl+w",
-    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "workbench.action.closeWindow",
-    "when": "!editorIsOpen"
-  },
-  {
-    "key": "cmd+w",
-    "command": "-workbench.action.closeWindow",
-    "when": "!editorIsOpen"
-  },
-  {
-    "key": "ctrl+shift+w",
-    "command": "workbench.action.closeWindow"
-  },
-  {
-    "key": "shift+cmd+w",
-    "command": "-workbench.action.closeWindow"
-  },
-  {
-    "key": "ctrl+\\",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "-workbench.action.terminal.toggleTerminal"
-  }
+	{
+		"key": "ctrl+;",
+		"command": "workbench.action.showCommands"
+	},
+	{
+		"key": "shift+cmd+p",
+		"command": "-workbench.action.j"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "-cursorUp",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "workbench.action.quickOpen"
+	},
+	{
+		"key": "cmd+p",
+		"command": "-workbench.action.quickOpen"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "macros.toggleSideBar"
+	},
+	{
+		"key": "cmd+b",
+		"command": "-workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "-workbench.action.switchWindow"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "-extension.vim_ctrl+w",
+		"when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "workbench.action.closeWindow",
+		"when": "!editorIsOpen"
+	},
+	{
+		"key": "cmd+w",
+		"command": "-workbench.action.closeWindow",
+		"when": "!editorIsOpen"
+	},
+	{
+		"key": "ctrl+shift+w",
+		"command": "workbench.action.closeWindow"
+	},
+	{
+		"key": "shift+cmd+w",
+		"command": "-workbench.action.closeWindow"
+	},
+	{
+		"key": "ctrl+\\",
+		"command": "workbench.action.terminal.toggleTerminal"
+	},
+	{
+		"key": "ctrl+`",
+		"command": "-workbench.action.terminal.toggleTerminal"
+	},
+	{
+		"key": "ctrl+shift+]",
+		"command": "workbench.action.terminal.new"
+	},
+	{
+		"key": "ctrl+shift+`",
+		"command": "-workbench.action.terminal.new"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "-extension.vim_ctrl+]",
+		"when": "editorTextFocus && vim.active && vim.use<C-]> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+[",
+		"command": "-extension.vim_ctrl+[",
+		"when": "editorTextFocus && vim.active && vim.use<C-[> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "workbench.action.toggleMaximizedPanel"
+	},
+	{
+		"key": "ctrl+q",
+		"command": "-workbench.action.quickOpenView"
+	},
+	{
+		"key": "ctrl+q",
+		"command": "-extension.vim_winCtrlQ",
+		"when": "editorTextFocus && vim.active && vim.use<C-q> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+q",
+		"command": "-workbench.action.quickOpenNavigateNextInViewPicker",
+		"when": "inQuickOpen && inViewsPicker"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "workbench.action.closeGroup",
+		"when": "activeEditorGroupEmpty && multipleEditorGroups"
+	},
+	{
+		"key": "cmd+w",
+		"command": "-workbench.action.closeGroup",
+		"when": "activeEditorGroupEmpty && multipleEditorGroups"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "workbench.action.closeWindow",
+		"when": "!editorIsOpen && !multipleEditorGroups"
+	},
+	{
+		"key": "cmd+w",
+		"command": "-workbench.action.closeWindow",
+		"when": "!editorIsOpen && !multipleEditorGroups"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "workbench.action.closeActiveEditor"
+	},
+	{
+		"key": "cmd+w",
+		"command": "-workbench.action.closeActiveEditor"
+	},
+	{
+		"key": "ctrl+h",
+		"command": "-deleteLeft",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+h",
+		"command": "workbench.action.navigateLeft",
+		"when": "!terminalFocus"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "workbench.action.navigateRight",
+		"when": "!terminalFocus"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "workbench.action.navigateUp",
+	},
+	{
+		"key": "ctrl+j",
+		"command": "workbench.action.navigateDown",
+		"when": "!terminalFocus"
+	},
+	{
+		"key": "ctrl+e",
+		"command": "-cursorLineEnd",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "workbench.view.explorer"
+	},
+	{
+		"key": "shift+cmd+e",
+		"command": "-workbench.view.explorer"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "-deleteRight",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "-list.focusPageDown",
+		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "workbench.view.debug"
+	},
+	{
+		"key": "shift+cmd+d",
+		"command": "-workbench.view.debug"
+	},
+	{
+		"key": "ctrl+shift+x",
+		"command": "workbench.view.extensions"
+	},
+	{
+		"key": "shift+cmd+x",
+		"command": "-workbench.view.extensions"
+	},
+	{
+		"key": "ctrl+shift+f",
+		"command": "workbench.view.search",
+		"when": "!searchViewletVisible"
+	},
+	{
+		"key": "shift+cmd+f",
+		"command": "-workbench.view.search",
+		"when": "!searchViewletVisible"
+	},
+	{
+		"key": "ctrl+shift+p",
+		"command": "workbench.actions.view.problems"
+	},
+	{
+		"key": "shift+cmd+m",
+		"command": "-workbench.actions.view.problems"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "workbench.action.output.toggleOutput"
+	},
+	{
+		"key": "shift+cmd+u",
+		"command": "-workbench.action.output.toggleOutput"
+	},
+	{
+		"key": "ctrl+shift+c",
+		"command": "workbench.debug.action.toggleRepl"
+	},
+	{
+		"key": "shift+cmd+y",
+		"command": "-workbench.debug.action.toggleRepl"
+	},
+	{
+		"key": "ctrl+e",
+		"command": "-extension.vim_ctrl+e",
+		"when": "editorTextFocus && vim.active && vim.use<C-e> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+o",
+		"command": "fuzzySearch.activeTextEditor"
+	}
 ]

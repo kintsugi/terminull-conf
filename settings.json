@@ -1,151 +1,189 @@
 {
-  // macros
-  "macros": {
-    "toggleSideBar": [
-      "workbench.action.toggleSidebarVisibility",
-      "workbench.action.toggleActivityBarVisibility"
-    ]
-  },
-  // editor settings
-  "editor.fontFamily": "Fira Code",
-  "editor.fontLigatures": true,
-  //"editor.formatOnSave": true,
-  "editor.cursorBlinking": "solid",
-  "editor.cursorStyle": "block-outline",
-  "editor.minimap.enabled": false,
-  "editor.lineNumbers": "relative",
-  "workbench.sideBar.location": "right",
-  // terminal settings
-  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-  // js settings
-  //"javascript.implicitProjectConfig.checkJs": true,
-  "npm.enableScriptExplorer": true,
-  "typescript.validate.enable": false,
-  // vim settings
-  "vim.easymotion": true,
-  "vim.sneak": true,
-  "vim.incsearch": true,
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
-  "vim.insertModeKeyBindings": [
-    {
-      "before": [
-        "j",
-        "j"
-      ],
-      "after": [
-        "<Esc>"
-      ]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<leader>",
-        "d"
-      ],
-      "after": [
-        "d",
-        "d"
-      ]
-    },
-    {
-      "before": [
-        "<C-n>"
-      ],
-      "commands": [
-        {
-          "command": ":nohl"
-        }
-      ]
-    },
-    {
-      "before": [
-        ";"
-      ],
-      "commands": [
-        {
-          "command": "workbench.action.showCommands",
-        }
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "w"
-      ],
-      "commands": [
-        {
-          "command": "workbench.action.files.save",
-        }
-      ]
-    },
-    {
-      "before": [
-        "Z",
-        "Z"
-      ],
-      "commands": [
-        {
-          "command": ":wq"
-        },
-      ]
-    }
-  ],
-  "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        ">"
-      ],
-      "commands": [
-        {
-          "command": "editor.action.indentLines"
-        }
-      ]
-    },
-    {
-      "before": [
-        "<"
-      ],
-      "commands": [
-        {
-          "command": "editor.action.outdentLines"
-        }
-      ]
-    },
-  ],
-  "vim.leader": ",",
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false
-  },
-  "vim.statusBarColorControl": true,
-  "vim.statusBarColors": {
-    "normal": [
-      "#8FBCBB",
-      "#434C5E"
-    ],
-    "insert": "#BF616A",
-    "visual": "#B48EAD",
-    "visualline": "#B48EAD",
-    "visualblock": "#A3BE8C",
-    "replace": "#D08770"
-  },
-  // misc
-  "workbench.colorTheme": "Cobalt2",
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#8FBCBB",
-    "statusBar.noFolderBackground": "#8FBCBB",
-    "statusBar.debuggingBackground": "#8FBCBB",
-    "statusBar.foreground": "#434C5E"
-  },
-  "gitlens.advanced.messages": {
-    "suppressShowKeyBindingsNotice": true
-  },
-  "workbench.editor.showTabs": true,
-  "workbench.activityBar.visible": true,
-  "git.autofetch": true,
-  "workbench.iconTheme": "vscode-icons",
-  "vsicons.dontShowNewVersionMessage": true,
+	// macros
+	"macros": {
+		"toggleSideBar": [
+			"workbench.action.toggleSidebarVisibility"
+		],
+	},
+	// editor settings
+	"editor.fontFamily": "Fira Code",
+	"editor.fontLigatures": true,
+	"editor.formatOnSave": true,
+	"javascript.format.enable": false,
+	"prettier.eslintIntegration": true,
+	"editor.cursorBlinking": "solid",
+	"editor.cursorStyle": "block-outline",
+	"editor.minimap.enabled": false,
+	"editor.lineNumbers": "relative",
+	"editor.insertSpaces": false,
+	"editor.tabSize": 4,
+	"editor.detectIndentation": false,
+	"files.exclude": {
+		"**/._*": true,
+		"**/*~": true
+	},
+	"workbench.sideBar.location": "right",
+	// terminal settings
+	// js settings
+	//"javascript.implicitProjectConfig.checkJs": true,
+	"npm.enableScriptExplorer": true,
+	"typescript.validate.enable": false,
+	// vim settings
+	"vim.easymotion": true,
+	"vim.sneak": true,
+	"vim.incsearch": true,
+	"vim.useSystemClipboard": true,
+	"vim.useCtrlKeys": true,
+	"vim.hlsearch": true,
+	"vim.insertModeKeyBindings": [
+		{
+			"before": [
+				"j",
+				"j"
+			],
+			"after": [
+				"<Esc>"
+			]
+		}
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<leader>",
+				"d"
+			],
+			"after": [
+				"d",
+				"d"
+			]
+		},
+		{
+			"before": [
+				";"
+			],
+			"commands": [
+				{
+					"command": "workbench.action.showCommands",
+				}
+			]
+		},
+		{
+			"before": [
+				"leader",
+				"w"
+			],
+			"commands": [
+				{
+					"command": "workbench.action.files.save",
+				}
+			]
+		},
+		{
+			"before": [
+				"leader",
+				"q"
+			],
+			"commands": [
+				{
+					"command": "workbench.action.files.closeWindow",
+				}
+			]
+		},
+		{
+			"before": [
+				"Z",
+				"Z"
+			],
+			"commands": [
+				{
+					"command": ":wq"
+				},
+			]
+		},
+		{
+			"before": [
+				"[",
+				"<space>"
+			],
+			"commands": [
+				{
+					"command": "editor.action.insertLineBefore"
+				},
+			]
+		},
+		{
+			"before": [
+				"]",
+				"<space>"
+			],
+			"commands": [
+				{
+					"command": "editor.action.insertLineAfter"
+				},
+			]
+		}
+	],
+	"vim.visualModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				">"
+			],
+			"commands": [
+				{
+					"command": "editor.action.indentLines"
+				}
+			]
+		},
+		{
+			"before": [
+				"<"
+			],
+			"commands": [
+				{
+					"command": "editor.action.outdentLines"
+				}
+			]
+		},
+	],
+	"vim.leader": ",",
+	"vim.handleKeys": {
+		"<C-a>": false,
+		"<C-f>": false
+	},
+	"vim.statusBarColorControl": true,
+	"vim.statusBarColors": {
+		"normal": [
+			"#8FBCBB",
+			"#434C5E"
+		],
+		"insert": "#BF616A",
+		"visual": "#B48EAD",
+		"visualline": "#B48EAD",
+		"visualblock": "#A3BE8C",
+		"replace": "#D08770"
+	},
+	// misc
+	"workbench.colorTheme": "Cobalt2",
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#8FBCBB",
+		"statusBar.noFolderBackground": "#8FBCBB",
+		"statusBar.debuggingBackground": "#8FBCBB",
+		"statusBar.foreground": "#434C5E"
+	},
+	"workbench.editor.showTabs": true,
+	"workbench.activityBar.visible": false,
+	"git.autofetch": true,
+	"workbench.iconTheme": "vscode-icons",
+	"sync.gist": "",
+	"sync.host": "",
+	"sync.pathPrefix": "",
+	"sync.quietSync": false,
+	"sync.askGistName": false,
+	"sync.removeExtensions": true,
+	"sync.syncExtensions": true,
+	"sync.autoDownload": false,
+	"sync.autoUpload": false,
+	"sync.lastUpload": "",
+	"sync.lastDownload": "",
+	"sync.forceDownload": false
 }
